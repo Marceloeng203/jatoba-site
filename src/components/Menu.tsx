@@ -9,6 +9,7 @@ const links = [
   { href: "/galeria", texto: "Galeria" },
   { href: "/jogos", texto: "Jogos" },
   { href: "/engenharia", texto: "Engenharia" },
+  { href: "/laboratorio", texto: "Lab" },
 ];
 
 export function Menu() {
