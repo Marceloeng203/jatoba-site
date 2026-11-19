@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌳 Site do grupo Jatobá
 
-## Getting Started
+Site do grupo Jatobá (Engenharia Civil, IFTO Palmas).
 
-First, run the development server:
+## As peças (e por que cada uma)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Peça | Pra que serve | Custo |
+|---|---|---|
+| **Next.js** | O framework do site (React). Cada pasta em `src/app` vira uma página. | Grátis |
+| **Tailwind CSS** | Estilo direto no HTML com classes tipo `text-xl font-bold`. | Grátis |
+| **Supabase** | Banco de dados, login dos membros e armazenamento das fotos. | Grátis (1 GB de fotos, por isso comprimimos) |
+| **Vercel** | Coloca o site no ar. Cada `git push` publica automaticamente. | Grátis |
+| **GitHub** | Guarda o código e o histórico de mudanças. | Grátis |
+
+## Onde fica cada coisa
+
+```
+src/
+  app/
+    layout.tsx        -> moldura de todas as páginas (menu + rodapé)
+    page.tsx          -> página inicial (/)
+    sobre/page.tsx    -> /sobre
+    galeria/page.tsx  -> /galeria (vai ser só para membros)
+    jogos/page.tsx    -> /jogos
+    engenharia/page.tsx -> /engenharia (pode ser pública)
+    login/page.tsx    -> /login
+    globals.css       -> cores do site
+  components/Menu.tsx -> o menu do topo
+  lib/supabase/       -> conexão com o Supabase
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rodando no seu computador
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Instale o [Node.js](https://nodejs.org) (versão LTS).
+2. No terminal, dentro da pasta do projeto:
+   ```bash
+   npm install
+   cp .env.example .env.local   # e preencha com as chaves do Supabase
+   npm run dev
+   ```
+3. Abra http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Próximos passos
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Ligar o login ao Supabase
+- [ ] Proteger galeria (só membros)
+- [ ] Upload de fotos com compressão
+- [ ] Primeiro joguinho
