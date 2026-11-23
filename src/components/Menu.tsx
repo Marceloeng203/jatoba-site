@@ -8,6 +8,7 @@ const links = [
   { href: "/sobre", texto: "Sobre nós" },
   { href: "/galeria", texto: "Galeria" },
   { href: "/jogos", texto: "Jogos" },
+  { href: "/sorteio", texto: "Sorteio" },
   { href: "/engenharia", texto: "Engenharia" },
 ];
 
