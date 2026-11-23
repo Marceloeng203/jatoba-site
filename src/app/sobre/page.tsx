@@ -1,11 +1,11 @@
 // Troquem os nomes e descrições pelos de vocês!
 const membros = [
   { nome: "Marcelo", papel: "Líder do grupo" },
-  { nome: "Membro 2", papel: "Escreva algo aqui" },
-  { nome: "Membro 3", papel: "Escreva algo aqui" },
-  { nome: "Membro 4", papel: "Escreva algo aqui" },
-  { nome: "Membro 5", papel: "Escreva algo aqui" },
-  { nome: "Membro 6", papel: "Escreva algo aqui" },
+  { nome: "Kainan", papel: "Membro do grupo" },
+  { nome: "Pedro Henrique", papel: "Membro do grupo" },
+  { nome: "João Victor", papel: "Membro do grupo" },
+  { nome: "José Henrique", papel: "Membro do grupo" },
+  { nome: "João Marcos", papel: "Membro do grupo" },
 ];
 
 export default function Sobre() {
